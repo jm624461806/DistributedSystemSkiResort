@@ -74,7 +74,6 @@ public class ClientPart1 {
 
         long end = System.currentTimeMillis();
         long wallTime = end - start;
-
         ClientUtil.printOutTheData(wallTime, totalSuccess.get(), totalFails.get());
 
     }

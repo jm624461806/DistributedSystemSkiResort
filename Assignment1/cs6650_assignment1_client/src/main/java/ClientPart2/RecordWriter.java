@@ -3,16 +3,19 @@ package ClientPart2;
 import Model.Record;
 
 import java.io.*;
+import java.util.List;
 import java.util.concurrent.BlockingQueue;
 
 public class RecordWriter implements Runnable{
 
     BlockingQueue<Record> bq;
     private String path;
+    private List<Record> recordList;
 
-    public RecordWriter(BlockingQueue<Record> bq, String csv) {
+    public RecordWriter(BlockingQueue<Record> bq, String csv, List<Record> recordList) {
         this.bq = bq;
         this.path = csv;
+        this.recordList = recordList;
     }
 
     @Override
@@ -30,6 +33,7 @@ public class RecordWriter implements Runnable{
             while (true) {
                 Record record = bq.take();
                 if (record.getStartTime() == -1) break;
+                this.recordList.add(record);
                 addBody(fileWriter, record);
                 fileWriter.flush();
             }

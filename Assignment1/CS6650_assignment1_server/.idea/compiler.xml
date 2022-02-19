@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="CS6650_assignment1_server" />
         <module name="CS6650-assignment1" />
       </profile>
     </annotationProcessing>

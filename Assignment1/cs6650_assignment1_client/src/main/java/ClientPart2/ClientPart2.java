@@ -5,7 +5,10 @@ import Model.HttpMethod;
 import Model.Record;
 import org.apache.commons.cli.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -18,6 +21,7 @@ public class ClientPart2 {
 
     private static ClientUtil clientUtil = new ClientUtil();
     private static RecordUtil recordUtil = new RecordUtil();
+    private static ChartUtil chartUtil = new ChartUtil();
     private static Integer numThreads = 16;
     private static Integer numOfSkiers = 1000;
     private static Integer numSkiLifts = 40;
@@ -59,9 +63,10 @@ public class ClientPart2 {
         AtomicInteger totalFails = new AtomicInteger(0);
 
         BlockingQueue<Record> bQueue = new LinkedBlockingDeque<>();
+        List<Record> recordList = new ArrayList<>();
 
-        String csv = "records.csv";
-        RecordWriter recordWriter = new RecordWriter(bQueue, csv);
+        String csv = "records-" + numThreads + "-threads.csv";
+        RecordWriter recordWriter = new RecordWriter(bQueue, csv, recordList);
         Thread consumer = new Thread(recordWriter);
         consumer.start();
 
@@ -94,6 +99,7 @@ public class ClientPart2 {
         consumer.join();
 
         recordUtil.generateReport(wallTime, csv, totalFails.get(), totalSuccess.get());
+        ChartUtil.generateChartData(recordList, numThreads);
     }
 
     private static void parseCommandLine(String[] args) {
@@ -113,7 +119,7 @@ public class ClientPart2 {
         numSkiLiftsOpt.setRequired(true);
         options.addOption(numSkiLiftsOpt);
 
-        Option meanNumOfSkiLiftsPerSkierRidePerDayOpt= new Option("meanNum",
+        Option meanNumOfSkiLiftsPerSkierRidePerDayOpt= new Option("numRuns",
                 "numRuns", true,
                 "mean numbers of ski lifts each skier rides each day");
         meanNumOfSkiLiftsPerSkierRidePerDayOpt.setRequired(true);
@@ -142,7 +148,7 @@ public class ClientPart2 {
 
     private static boolean isValidCommand(CommandLine cmd) {
         // max thread > 0 and <= 1024
-        String commandLineMaxThreads = cmd.getOptionValue("maxThreads");
+        String commandLineMaxThreads = cmd.getOptionValue("numThreads");
         if(commandLineMaxThreads != null && !commandLineMaxThreads.isEmpty()) {
             if (!clientUtil.isValidNumber(commandLineMaxThreads, 1, maxNumOfThreads)) return false;
             numThreads = Integer.parseInt(commandLineMaxThreads);
@@ -176,4 +182,5 @@ public class ClientPart2 {
 
         return true;
     }
+
 }

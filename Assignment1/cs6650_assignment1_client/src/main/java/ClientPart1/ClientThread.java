@@ -21,8 +21,6 @@ public class ClientThread implements Runnable{
     private Integer numSkiLifts;
     private int numOfRequest;
     private String ipAddress;
-    private int numOfSuccess = 0;
-    private int numOfFails = 0;
     AtomicInteger totalSuccess;
     AtomicInteger totalFails;
 
@@ -44,10 +42,12 @@ public class ClientThread implements Runnable{
 
     @Override
     public void run() {
-        String url = "http://" + this.ipAddress + ":8080/CS6650-assignment1_war/";
+        String url = "http://" + this.ipAddress + ":8080/CS6650-assignment1_war/"; //CS6650-assignment1_war
         SkiersApi apiInstance = new SkiersApi();
         apiInstance.getApiClient().setBasePath(url);
 
+        int success = 0;
+        int numFails = 0;
         for(int i=0; i < numOfRequest; i++) {
             LiftRide newLiftRide = new LiftRide();
             newLiftRide.setLiftID(ThreadLocalRandom.current().nextInt(1, numSkiLifts + 1));
@@ -58,27 +58,29 @@ public class ClientThread implements Runnable{
                 ApiResponse<Void> res = apiInstance.writeNewLiftRideWithHttpInfo(newLiftRide,
                         12, "2022", "213", skierId);
                 if (res.getStatusCode() == 201 || res.getStatusCode() == 200) {
-                    this.numOfSuccess++;
-                    totalSuccess.getAndIncrement();
+                    success++;
                 } else {
                     int fails = 0;
                     for (int j = 0; j < NUM_OF_RE_TRIES; j++) {
                         res = apiInstance.writeNewLiftRideWithHttpInfo(newLiftRide,
                                 12, "2022", "213", skierId);
                         if (res.getStatusCode() == 201 || res.getStatusCode() == 200) {
-                            this.numOfSuccess++;
-                            totalSuccess.getAndIncrement();
+                            success++;
                             break;
                         } else {
                             fails++;
                         }
                     }
-                    if(fails == NUM_OF_RE_TRIES) totalFails.getAndIncrement();
+                    if(fails == NUM_OF_RE_TRIES) numFails++;
                 }
             } catch (ApiException e){
+                numFails++;
                 e.printStackTrace();
             }
         }
+
+        totalSuccess.getAndAdd(success);
+        totalFails.getAndAdd(numFails);
         if(phase != null) this.phase.countDown();
         this.allPhases.countDown();
     }

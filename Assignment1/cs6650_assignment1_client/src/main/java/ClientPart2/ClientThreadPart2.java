@@ -7,7 +7,10 @@ import io.swagger.client.ApiResponse;
 import io.swagger.client.api.SkiersApi;
 import io.swagger.client.model.LiftRide;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -24,14 +27,13 @@ public class ClientThreadPart2 implements Runnable{
     private Integer numSkiLifts;
     private int numOfRequest;
     private String ipAddress;
-    private int numOfSuccess = 0;
-    private int numOfFails = 0;
     AtomicInteger totalSuccess;
     AtomicInteger totalFails;
     BlockingQueue<Record> bq;
+
     public ClientThreadPart2(Integer skierIDsStart, Integer skierIDsEnd, int startTime, int endTime,
-                        CountDownLatch phase, Integer numSkiLifts, CountDownLatch allPhases,
-                        int numOfRequest, String ipAddress, AtomicInteger totalSuccess, AtomicInteger totalFails,
+                             CountDownLatch phase, Integer numSkiLifts, CountDownLatch allPhases,
+                             int numOfRequest, String ipAddress, AtomicInteger totalSuccess, AtomicInteger totalFails,
                              BlockingQueue<Record> bq) {
         this.skierIdsStart = skierIDsStart;
         this.skierIDsEnd = skierIDsEnd;
@@ -53,6 +55,9 @@ public class ClientThreadPart2 implements Runnable{
         SkiersApi apiInstance = new SkiersApi();
         apiInstance.getApiClient().setBasePath(url);
 
+        int success = 0;
+        int numFails = 0;
+        List<Record> tempList = new ArrayList<>();
         for(int i=0; i < numOfRequest; i++) {
             LiftRide newLiftRide = new LiftRide();
             newLiftRide.setLiftID(ThreadLocalRandom.current().nextInt(1, numSkiLifts));
@@ -60,38 +65,40 @@ public class ClientThreadPart2 implements Runnable{
             newLiftRide.setWaitTime(ThreadLocalRandom.current().nextInt(0, 10));
             int skierId = ThreadLocalRandom.current().nextInt(skierIdsStart, skierIDsEnd);
             try{
+                int fails = 0;
                 long start = System.currentTimeMillis();
                 ApiResponse<Void> res = apiInstance.writeNewLiftRideWithHttpInfo(newLiftRide,
                         12, "2022", "213", skierId);
                 long end = System.currentTimeMillis();
 
                 if (res.getStatusCode() == 201 || res.getStatusCode() == 200) {
-                    this.numOfSuccess++;
-                    totalSuccess.getAndIncrement();
+                    success++;
                 } else {
-                    int fails = 0;
                     for (int j = 0; j < NUM_OF_RE_TRIES; j++) {
                         res = apiInstance.writeNewLiftRideWithHttpInfo(newLiftRide,
                                 12, "2022", "213", skierId);
                         if (res.getStatusCode() == 201 || res.getStatusCode() == 200) {
-                            this.numOfSuccess++;
-                            totalSuccess.getAndIncrement();
+                            success++;
                             break;
                         } else {
                             fails++;
                         }
                     }
-                    if(fails == NUM_OF_RE_TRIES) totalFails.getAndIncrement();
+                    if(fails == NUM_OF_RE_TRIES) numFails++;
                 }
                 Record record = new Record(start, HttpMethod.POST, res.getStatusCode(), end - start);
                 bq.put(record);
             } catch (ApiException e){
+                numFails++;
                 e.printStackTrace();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
+
+        totalSuccess.getAndAdd(success);
+        totalFails.getAndAdd(numFails);
+
         if(phase != null) this.phase.countDown();
         this.allPhases.countDown();
     }

@@ -3,7 +3,9 @@ package ClientPart1;
 import ClientPart2.ClientThreadPart2;
 import Model.Record;
 
+import java.util.List;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -39,9 +41,9 @@ public class ClientUtil {
     }
 
     public static void createAndStartTheThreadPart2(int phaseThreads, Integer skierIDsRange,
-                                               int startTime, int endTime, CountDownLatch phase,
-                                               Integer numSkiLifts, CountDownLatch allPhases, int numOfRequest,
-                                               String ipAddress, AtomicInteger totalSuccess, AtomicInteger totalFails,
+                                                    int startTime, int endTime, CountDownLatch phase,
+                                                    Integer numSkiLifts, CountDownLatch allPhases, int numOfRequest,
+                                                    String ipAddress, AtomicInteger totalSuccess, AtomicInteger totalFails,
                                                     BlockingQueue<Record> bq, int numSkiers) {
         for(int i = 0; i < phaseThreads; i++) {
             Integer skierIDsStart = i * skierIDsRange + 1;

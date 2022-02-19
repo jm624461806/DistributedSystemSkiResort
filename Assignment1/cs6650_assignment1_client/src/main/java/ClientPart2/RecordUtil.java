@@ -22,6 +22,7 @@ public class RecordUtil {
         System.out.println("==================================================");
         System.out.println("Mean response time: " + mean + " ms");
         System.out.println("Median response time: " + median + " ms");
+        System.out.println("Wall time: " + wallTime + " ms");
         System.out.println("The total throughput in requests per second: " +
                 (totalFails + totalSuccess) / (double) (wallTime / 1000) + "(req/sec)");
         System.out.println("The p99 response time: " + ninetyNine + " ms");
