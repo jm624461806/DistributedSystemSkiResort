@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Assignment2:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0499e62-b84f-4b76-8009-e85339224f51" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/HttpMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/HttpMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/ResortServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/ResortServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/ServletsUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/ServletsUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/SkiersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/SkiersServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/StatisticsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/CS6650_assignment1_server/target/classes/Servlets/StatisticsServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/src/main/java/TestClient/SingleThreadForLittlesLaw.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/src/main/java/TestClient/SingleThreadForLittlesLaw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/src/main/java/TestClient/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/src/main/java/TestClient/TestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart1/ClientPart1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart1/ClientPart1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart1/ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart1/ClientThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart1/ClientUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart1/ClientUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/ChartUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/ChartUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/ChartUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/ChartUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/ClientPart2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/ClientPart2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/ClientThreadPart2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/ClientThreadPart2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/RecordUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/RecordUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/RecordWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/ClientPart2/RecordWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/Model/HttpMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/Model/HttpMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/Model/Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/Model/Record.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/TestClient/SingleThreadForLittlesLaw.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/TestClient/SingleThreadForLittlesLaw.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/TestClient/TestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/cs6650_assignment1_client/target/classes/TestClient/TestClient.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25kqGz4w9Y7rk4sFKfFBdwvnOou" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3229885" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.58" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.58" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="Assignment2:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/assignment2" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="074bf85a-0a21-40ff-bb4f-a24ea40160fe" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50695" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Assignment2:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0499e62-b84f-4b76-8009-e85339224f51" name="Changes" comment="" />
+      <created>1646081344755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646081344755</updated>
+      <workItem from="1646081349044" duration="17400000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
