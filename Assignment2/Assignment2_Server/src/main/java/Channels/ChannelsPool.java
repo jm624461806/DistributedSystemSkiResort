@@ -8,14 +8,15 @@ public class ChannelsPool {
     private GenericObjectPool<Channel> channelsPool;
     public static GenericObjectPoolConfig defaultConfig;
 
+    /*
     static {
         defaultConfig = new GenericObjectPoolConfig();
         defaultConfig.setMaxTotal(500);
         defaultConfig.setBlockWhenExhausted(false);
-    }
+    }*/
 
     public ChannelsPool() {
-        this.channelsPool = new GenericObjectPool<Channel>(new ChannelsFactory("34.210.159.67"), defaultConfig);
+        this.channelsPool = new GenericObjectPool<Channel>(new ChannelsFactory("34.210.159.67"));
     }
 
     public Channel getChannel() {
